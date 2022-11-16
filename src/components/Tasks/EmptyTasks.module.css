@@ -1,0 +1,29 @@
+.emptyTasksContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+  margin-top: 2.4rem;
+  padding: 6.4rem 2.4rem;
+}
+
+.emptyTasksContainer > img {
+  height: 5.6rem;
+}
+
+.emptyTasksContainer > p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--gray-300);
+  text-align: center;
+}
+
+.emptyTasksContainer > p span {
+  display: block;
+  font-weight: 400;
+}

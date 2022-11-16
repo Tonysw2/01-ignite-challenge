@@ -1,0 +1,56 @@
+.taskItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.2rem;
+
+  padding: 1.6rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+  background: var(--gray-500);
+}
+
+.taskItem > div {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.taskItem + .taskItem {
+  margin-top: 1.2rem;
+}
+
+.taskItem > div > input[type='checkbox'] {
+  border-radius: 100px;
+}
+
+.taskItem > div > p {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.taskItem > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.4rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--gray-300);
+
+  transition: all 0.2s;
+}
+
+.taskItem > button:hover {
+  background: var(--gray-400);
+  color: var(--red-500);
+  cursor: pointer;
+}
+
+.complete {
+  color: var(--gray-300) !important;
+  text-decoration: line-through;
+}
