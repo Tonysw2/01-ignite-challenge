@@ -24,7 +24,7 @@ export const Form = function () {
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl md:max-w-[90%] mx-auto">
       <form
         onSubmit={handleSubmit}
         className="flex items-center gap-2 -mt-7 mb-16"

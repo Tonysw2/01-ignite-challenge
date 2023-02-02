@@ -25,7 +25,7 @@ export const TaskList = function () {
   }, [taskList])
 
   return (
-    <div className="max-w-3xl mx-auto flex flex-col gap-6">
+    <div className="max-w-3xl md:max-w-[90%] mx-auto flex flex-col gap-6">
       <header className="flex items-center justify-between">
         <div>
           <p className="flex items-center gap-2 text-md text-blue-500 font-bold">
@@ -51,7 +51,7 @@ export const TaskList = function () {
       <div className=" max-h-[500px] overflow-y-scroll ">
         <ul className="flex flex-col justify-center gap-3">
           {taskList.length > 0 ? (
-            taskList.map((taskItem) => {
+            taskList.map(taskItem => {
               return <TaskItem key={taskItem.id} taskItem={taskItem} />
             })
           ) : (

@@ -24,13 +24,16 @@ module.exports = {
     fontFamily: {
       inter: [`'Inter', sans-serif`],
     },
+
     fontSize: {
       sm: ['12px', '1.4'],
       md: ['14px', '1.4'],
       lg: ['16px', '1.4'],
     },
 
-    extend: {},
+    screens: {
+      md: { max: '850px' },
+    },
   },
   plugins: [],
 }

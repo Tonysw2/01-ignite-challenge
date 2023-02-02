@@ -31,14 +31,14 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
   const addTask = function (text: string) {
     if (text === '') return
 
-    setTaskList((prev) => {
+    setTaskList(prev => {
       return [...prev, { text, id: crypto.randomUUID(), isComplete: false }]
     })
   }
 
   const deleteTask = function (id: string) {
-    setTaskList((prev) => {
-      const listWithoutDeletedOne = prev.filter((task) => {
+    setTaskList(prev => {
+      const listWithoutDeletedOne = prev.filter(task => {
         if (task.id !== id) return task
         return null
       })
@@ -47,8 +47,8 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
   }
 
   const completeTask = function (id: string) {
-    setTaskList((prev) => {
-      const updatedListWithCompletedOne = prev.map((task) => {
+    setTaskList(prev => {
+      const updatedListWithCompletedOne = prev.map(task => {
         if (task.id === id) {
           return { ...task, isComplete: !task.isComplete }
         } else {
@@ -65,14 +65,14 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
   }
 
   const updateTask = function (text: string) {
-    const updatedTaskList = setTaskList((prev) =>
-      prev.map((task) => {
+    const updatedTaskList = setTaskList(prev =>
+      prev.map(task => {
         if (task.id === taskToEditId) {
           return { ...task, text }
         } else {
           return task
         }
-      }),
+      })
     )
 
     console.log(updatedTaskList)

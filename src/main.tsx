@@ -8,5 +8,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <TaskContextProvider>
       <App />
     </TaskContextProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
